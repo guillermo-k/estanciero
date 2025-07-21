@@ -23,10 +23,10 @@ for i in range(cantJugadores):
 jugadoresActivos= sorted(jugadoresActivos, reverse=True, key=lambda jugador: jugador.dados)
 for jug in jugadoresActivos:
     jug.orden=jugadoresActivos.index(jug)+1
-    jug.dinero = 1000000
-for prop in tablero.tablero:
-    if isinstance(prop,tablero.Propiedad):
-        prop.comprar(jugadoresActivos[0],banco)
+    jug.dinero = 35000
+# for prop in tablero.tablero:
+#     if isinstance(prop,tablero.Propiedad):
+#         prop.comprar(jugadoresActivos[0],banco)
 def turno(jugador):
     if jugador.preso:
         respuesta=vistas.salir_carcel(jugador)
