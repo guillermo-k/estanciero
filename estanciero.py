@@ -48,6 +48,7 @@ def turno(jugador):
                 jugar(jugador, dados, True)
             if jugador.intentos_salir < 0:
                 jugador.preso = False
+                jugar(jugador, dados, True)
             jugar(jugador)
         elif respuesta == 3: # Usar tarjeta Habeas Corpus
             tarjeta = jugador.tarjetas.pop(0)
@@ -94,7 +95,10 @@ def jugar(jugador, dados2 = 0, liberado = False):
             opciones_activas.append(0) # Terminar turno
         vistas.pintar_tablero(vistas.pantalla, vistas.largo_utilizable, vistas.x, vistas.y, jugadoresActivos)
         botones = vistas.panel_opciones(opciones_activas, jugador, jugadoresActivos)
-        opcion = vistas.a(vistas.pantalla, botones)
+        if not liberado:
+            opcion = vistas.a(vistas.pantalla, botones)
+        else:
+            opcion = 1
         pygame.display.update()
         if opcion == 1 and not jugador.preso:  # Tirar dados
             if habilitado:

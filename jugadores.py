@@ -58,10 +58,6 @@ class Jugador:
                     dado[2].center = rect_dadoDos
                     pantalla.blit(dado[1], rect_dadoDos)
             pygame.display.update()
-            ver_dados = 0
-            while ver_dados < 5000:
-                ver_dados += 1
-                print(ver_dados)
         return dadoUno, dadoDos, total, doble
 
     def marchePreso(self):

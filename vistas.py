@@ -794,9 +794,6 @@ def rematar(jugador, jugadores_activos):
                             if btn_mas_cien.collidepoint(raton):
                                 texto_importe = str(int(texto_importe) + 100)
                             if btn_ofertar.collidepoint(raton):
-                                print(texto_importe)
-                                print(int(texto_importe) > oferta_vigente[0])
-                                print(oferta_vigente[0])
                                 if int(texto_importe) > oferta_vigente[0]:
                                     oferta_vigente = (int(texto_importe), oferente)
                                     seguir = False
@@ -943,10 +940,8 @@ def saldo_negativo(jugador,jugadores_activos):
                 pygame.quit()
             elif evento.type == pygame.MOUSEBUTTONDOWN:
                 raton = pygame.mouse.get_pos()
-                print(raton)
                 for btn in botones:
                     if btn[0].collidepoint(raton) and btn[2]:
-                        print(btn[1])
                         return btn[1]
 
 
@@ -991,18 +986,14 @@ def nombrar_jugador(num_jugador, jugadoresActivos):
                 raton = pygame.mouse.get_pos()
                 for btn_peon in btns_peones:
                     if btn_peon[0].collidepoint(raton):
-                        txt_nombre,
-                        peon_seleccionado,
-                        seguir = comprobar_nombre(num_jugador,
+                        txt_nombre, peon_seleccionado, seguir = comprobar_nombre(num_jugador,
                                                     jugadoresActivos,
                                                     btn_peon[1],
                                                     txt_nombre)
             elif evento.type == pygame.KEYDOWN:
                 if evento.key == pygame.K_RETURN or evento.key == pygame.K_KP_ENTER:
                     peon = constantes.peones[0]
-                    txt_nombre,
-                    peon_seleccionado,
-                    seguir = comprobar_nombre(num_jugador,
+                    txt_nombre, peon_seleccionado, seguir = comprobar_nombre(num_jugador,
                                               jugadoresActivos,
                                               peon,
                                               txt_nombre)

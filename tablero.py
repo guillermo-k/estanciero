@@ -142,9 +142,9 @@ class Especial(Casillero):
                 print(dados[0], dados[1])
                 if not dados[3]:
                     jugador.descansos = 2
-                    vistas.mostrar_mensaje(('No ha sacado un doble, se queda 2 turnos a descansar', 0), ('', 0))
+                    vistas.mostrar_mensaje((('No ha sacado un doble, se queda 2 turnos a descansar', 0), ('', 0)),)
                 else:
-                    vistas.mostrar_mensaje(('Ha sacado un doble, no se puede quedar a descansar', 0), ('', 0))
+                    vistas.mostrar_mensaje((('Ha sacado un doble, no se puede quedar a descansar', 0), ('', 0)),)
                     print('Usted saco un doble, por lo cual, no se puede quedar a descansar')
         elif self.numero == 35:
             jugador.marchePreso()
