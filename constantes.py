@@ -1,4 +1,4 @@
-#_________ COLORES _________
+# _________ COLORES _________
 blanco = (255, 255, 255)
 negro = (0, 0, 0)
 azul = (0, 0, 255)
@@ -14,9 +14,9 @@ verde_oscuro = (0, 130, 0)
 naranja = (255, 120, 0)
 
 
-
-#_________ PEONES _________
-peones = ['Azul', 'Amarillo', 'Rojo', 'Verde', 'Blanco', 'Negro', 'Marron', 'Celeste', 'Rosa', 'Violeta']
+# _________ PEONES _________
+peones = ['Azul', 'Amarillo', 'Rojo', 'Verde', 'Blanco',
+          'Negro', 'Marron', 'Celeste', 'Rosa', 'Violeta']
 peones_dic = {'Azul': azul,
               'Amarillo': amarillo,
               'Rojo': rojo,
@@ -29,7 +29,5 @@ peones_dic = {'Azul': azul,
               'Violeta': violeta}
 
 
-
-
-
-acciones_con_marca = ['Edificar', 'Deshipotecar', 'Vender chacras', 'Hipotecar', 'Pedir']
+acciones_con_marca = ['Edificar', 'Deshipotecar', 'Vender chacras',
+                      'Hipotecar', 'Pedir']
